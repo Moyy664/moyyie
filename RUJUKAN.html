@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rujukan - Laman Informasi Di Sabah</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ background:#f5f7f3; color:#26352d; font-family:'Montserrat', Arial, sans-serif; }
+
+/* ============ HERO LAMAN UTAMA ============ */
+.hero{ width:100%; height:650px; position:relative; display:flex; justify-content:center; align-items:center; text-align:center; color:white; overflow:hidden; background-image: linear-gradient( rgba(0,0,0,0.25), rgba(0,0,0,0.68) ), url("HERO.jpg"); background-size:cover; background-position:center; background-repeat:no-repeat; }
+
+/* LOGO */
+.logo{ position:absolute; top:28px; left:6%; z-index:5; color:white; font-family:'Cinzel', serif; font-size:30px; font-weight:700; letter-spacing:5px; text-shadow: 0 3px 10px rgba(0,0,0,0.8); }
+.logo span{ color:#e1b45c; }
+
+/* HERO CONTENT */
+.hero-content{ position:relative; z-index:3; width:90%; max-width:1100px; margin-top:20px; }
+
+/* SELAMAT DATANG KE */
+.welcome{ font-family:'Montserrat', sans-serif; font-size:18px; font-weight:600; letter-spacing:8px; text-transform:uppercase; margin-bottom:18px; text-shadow: 0 3px 10px rgba(0,0,0,0.9); animation: fadeDown 1.5s ease; }
+
+/* GARIS KIRI DAN KAN */
+.welcome-line{ display:flex; justify-content:center; align-items:center; gap:20px; }
+.welcome-line::before,
+.welcome-line::after{ content:""; width:90px; height:2px; background:#e1b45c; }
+
+/* LAMAN INFORMASI DI SABAH */
+.hero h1{ font-family:'Cinzel', serif; font-size:64px; font-weight:700; letter-spacing:5px; line-height:1.2; margin-bottom:28px; text-transform:uppercase; color:white; text-shadow: 0 5px 15px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.5); animation: fadeUp 1.7s ease; }
+
+/* NEGERI DI BAWAH BAYU */
+.tagline{ font-family:'Great Vibes', cursive; font-size:60px; font-weight:400; color:#f4d28a; margin-bottom:28px; text-shadow: 0 3px 10px rgba(0,0,0,0.9); animation: fadeUp 2s ease; }
+
+/* ANIMATION */
+@keyframes fadeDown{ from{ opacity:0; transform:translateY(-30px); } to{ opacity:1; transform:translateY(0); } }
+@keyframes fadeUp{ from{ opacity:0; transform:translateY(40px); } to{ opacity:1; transform:translateY(0); } }
+
+/* ============ MENU ============ */
+nav{ width:100%; display:flex; background:#086b79; border-bottom:3px solid white; position:sticky; top:0; z-index:10; }
+nav a{ flex:1; min-height:65px; display:flex; align-items:center; justify-content:center; text-decoration:none; color:white; font-family:'Montserrat', sans-serif; font-size:13px; font-weight:700; letter-spacing:0.5px; border-right:1px solid rgba(255,255,255,0.7); transition:0.3s; }
+nav a:first-child{ border-left:1px solid rgba(255,255,255,0.7); }
+nav a:hover{ background:#064e59; }
+nav a.active{ background:#064e59; }
+
+/* TAJUK SECTION */
+.section-title{ text-align:center; padding:60px 20px 30px; }
+.section-title h2{ font-family:'Cinzel', serif; font-size:38px; color:#174d36; }
+.section-title span{ color:#d4a64d; }
+.section-title p{ color:#68736d; margin-top:10px; max-width:700px; margin-left:auto; margin-right:auto; }
+
+/* RUJUKAN */
+.reference-box{
+    max-width:900px;
+    margin:0 auto 80px;
+    background:white;
+    padding:50px 40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+    border-top:5px solid #d4a64d;
+}
+.reference-box h3{
+    font-family:'Cinzel', serif;
+    color:#174d36;
+    font-size:26px;
+    margin-bottom:20px;
+}
+.reference-box p{
+    color:#68736d;
+    line-height:1.8;
+    margin-bottom:20px;
+    font-size:15px;
+}
+.reference-box a{
+    display:inline-block;
+    background:#086b79;
+    color:white;
+    padding:12px 30px;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition:0.3s;
+    margin:8px;
+}
+.reference-box a:hover{
+    background:#064e59;
+    transform:translateY(-3px);
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(rgba(8, 107, 121, 0.85), rgba(8, 107, 121, 0.85)), url("HERO.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    text-align:center;
+    padding:80px 20px;
+    color:white;
+}
+.cta h2{
+    font-family:'Cinzel', serif;
+    font-size:40px;
+    margin-bottom:15px;
+}
+.cta p{
+    font-size:16px;
+    margin-bottom:30px;
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.hero-button{ 
+    display:inline-block; 
+    padding:15px 38px; 
+    background:#d4a64d; 
+    color:white; 
+    text-decoration:none; 
+    border-radius:30px; 
+    font-size:13px; 
+    font-weight:bold; 
+    letter-spacing:2px; 
+    transition:0.4s; 
+}
+.hero-button:hover{ background:#b88730; transform:translateY(-5px); }
+
+/* FOOTER */
+footer{
+    background:#174d36;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+footer p{
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+    nav{ flex-direction:column; }
+    nav a{ border-right:none; border-bottom:1px solid rgba(255,255,255,0.7); }
+    .hero h1{ font-size:40px; }
+    .tagline{ font-size:40px; }
+    .reference-box{ padding:30px 20px; margin:0 20px 60px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ============ LAMAN UTAMA HERO ============ -->
+<section class="hero" id="utama">
+    <div class="logo">SA<span>BAH</span></div>
+    <div class="hero-content">
+        <div class="welcome welcome-line">SELAMAT DATANG KE</div>
+        <h1>LAMAN INFORMASI DI SABAH</h1>
+        <div class="tagline">Negeri Di Bawah Bayu</div>
+    </div>
+</section>
+
+<!-- ============ MENU - DAH LINK ============ -->
+<nav>
+    <a href="LAMAN UTAMA.html">LAMAN UTAMA</a>
+    <a href="TEMPAT MENARIK.html">TEMPAT MENARIK</a>
+    <a href="PETA.html">PETA LOKASI</a>
+    <a href="RUJUKAN.html" class="active">SUMBER RUJUKAN</a>
+</nav>
+
+<!-- ============ RUJUKAN ============ -->
+<section id="rujukan">
+    <div class="section-title">
+        <h2><span>Rujukan</span></h2>
+        <p>Sumber maklumat yang digunakan dalam menghasilkan laman web ini.</p>
+    </div>
+
+    <div class="reference-box">
+        <h3>Sumber Rujukan</h3>
+        <p>Maklumat berkaitan Sabah, destinasi pelancongan, budaya dan alam semula jadi diperoleh daripada sumber-sumber berikut:</p>
+        <p>Laman web ini dibangunkan sebagai projek pendidikan untuk memperkenalkan keunikan dan keindahan Sabah.</p>
+        
+        <!-- DAH LETAK LINK -->
+        <a href="https://sabah.gov.my/ms/pengenalan" target="_blank">RUJUKAN 01 - Laman Rasmi Sabah</a>
+        <a href="https://www.academia.edu/36085179/PENGENALAN_NEGERI_SABAH" target="_blank">RUJUKAN 02 - Academia.edu</a>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <p>©2026 Sabah | Dibangunkan oleh FATIHAH BINTI ABDULLAH Pelajar Diploma Teknologi Maklumat |</p>
+</footer>
+
+</body>
+</html>

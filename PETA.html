@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peta Lokasi - Laman Informasi Di Sabah</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ background:#f5f7f3; color:#26352d; font-family:'Montserrat', Arial, sans-serif; }
+
+.hero{ width:100%; height:650px; position:relative; display:flex; justify-content:center; align-items:center; text-align:center; color:white; overflow:hidden; background-image: linear-gradient( rgba(0,0,0,0.25), rgba(0,0,0,0.68) ), url("HERO.jpg"); background-size:cover; background-position:center; background-repeat:no-repeat; }
+.logo{ position:absolute; top:28px; left:6%; z-index:5; color:white; font-family:'Cinzel', serif; font-size:30px; font-weight:700; letter-spacing:5px; text-shadow: 0 3px 10px rgba(0,0,0,0.8); }
+.logo span{ color:#e1b45c; }
+.hero-content{ position:relative; z-index:3; width:90%; max-width:1100px; margin-top:20px; }
+.welcome{ font-family:'Montserrat', sans-serif; font-size:18px; font-weight:600; letter-spacing:8px; text-transform:uppercase; margin-bottom:18px; text-shadow: 0 3px 10px rgba(0,0,0,0.9); animation: fadeDown 1.5s ease; }
+.welcome-line{ display:flex; justify-content:center; align-items:center; gap:20px; }
+.welcome-line::before,
+.welcome-line::after{ content:""; width:90px; height:2px; background:#e1b45c; }
+.hero h1{ font-family:'Cinzel', serif; font-size:64px; font-weight:700; letter-spacing:5px; line-height:1.2; margin-bottom:28px; text-transform:uppercase; color:white; text-shadow: 0 5px 15px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.5); animation: fadeUp 1.7s ease; }
+.tagline{ font-family:'Great Vibes', cursive; font-size:60px; font-weight:400; color:#f4d28a; margin-bottom:28px; text-shadow: 0 3px 10px rgba(0,0,0,0.9); animation: fadeUp 2s ease; }
+@keyframes fadeDown{ from{ opacity:0; transform:translateY(-30px); } to{ opacity:1; transform:translateY(0); } }
+@keyframes fadeUp{ from{ opacity:0; transform:translateY(40px); } to{ opacity:1; transform:translateY(0); } }
+
+nav{ width:100%; display:flex; background:#086b79; border-bottom:3px solid white; position:sticky; top:0; z-index:10; }
+nav a{ flex:1; min-height:65px; display:flex; align-items:center; justify-content:center; text-decoration:none; color:white; font-family:'Montserrat', sans-serif; font-size:13px; font-weight:700; letter-spacing:0.5px; border-right:1px solid rgba(255,255,255,0.7); transition:0.3s; }
+nav a:first-child{ border-left:1px solid rgba(255,255,255,0.7); }
+nav a:hover{ background:#064e59; }
+nav a.active{ background:#064e59; }
+
+.section-title{ text-align:center; padding:60px 20px 30px; }
+.section-title h2{ font-family:'Cinzel', serif; font-size:38px; color:#174d36; }
+.section-title span{ color:#d4a64d; }
+.section-title p{ color:#68736d; margin-top:10px; max-width:700px; margin-left:auto; margin-right:auto; }
+
+/* PETA */
+.map-section{ display:flex; gap:40px; padding:0 8% 80px; align-items:flex-start; flex-wrap:wrap; }
+.map-image{ flex:1; min-width:300px; }
+.map-image img{ width:100%; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
+
+.map-text{ flex:1; min-width:300px; }
+.map-text small{ color:#d4a64d; font-weight:bold; letter-spacing:2px; }
+.map-text h2{ font-family:'Cinzel', serif; font-size:32px; color:#174d36; margin:10px 0 15px; }
+.map-text p{ color:#68736d; line-height:1.8; margin-bottom:20px; }
+.location-list{ list-style:none; margin-bottom:25px; }
+.location-list li{ padding:12px 0; border-bottom:1px dashed #ddd; color:#26352d; font-weight:600; }
+.location-list li span{ color:#086b79; }
+.hero-button{ display:inline-block; padding:15px 38px; background:#d4a64d; color:white; text-decoration:none; border-radius:30px; font-size:13px; font-weight:bold; letter-spacing:2px; transition:0.4s; }
+.hero-button:hover{ background:#b88730; transform:translateY(-5px); }
+
+@media(max-width:900px){ .map-section{ flex-direction:column; } }
+
+footer{ background:#174d36; color:white; text-align:center; padding:30px 20px; margin-top:40px; }
+footer p{ font-size:14px; letter-spacing:1px; }
+footer span{ color:#d4a64d; }
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="logo">SA<span>BAH</span></div>
+    <div class="hero-content">
+        <div class="welcome welcome-line">SELAMAT DATANG KE</div>
+        <h1>LAMAN INFORMASI DI SABAH</h1>
+        <div class="tagline">Negeri Di Bawah Bayu</div>
+    </div>
+</section>
+
+<nav>
+    <a href="LAMAN UTAMA.html">LAMAN UTAMA</a>
+    <a href="TEMPAT MENARIK.html">TEMPAT MENARIK</a>
+    <a href="PETA.html" class="active">PETA LOKASI</a>
+    <a href="RUJUKAN.html">SUMBER RUJUKAN</a>
+</nav>
+
+<section id="peta-lokasi">
+    <div class="section-title">
+        <h2>Peta <span>Lokasi</span></h2>
+        <p>Lihat lokasi menarik di seluruh negeri Sabah</p>
+    </div>
+
+    <div class="map-section">
+        <!-- KIRI: GAMBAR PETA SAHAJA - DAH KOSONG -->
+        <div class="map-image">
+            <img src="sabahmap.png" alt="Peta Sabah">
+        </div>
+
+        <!-- KAN: INFO LOKASI -->
+        <div class="map-text">
+            <small>LOKASI SABAH</small>
+            <h2>Terokai Setiap Sudut Sabah</h2>
+            <p>Sabah terletak di bahagian utara Pulau Borneo dan mempunyai pelbagai destinasi pelancongan menarik.</p>
+            
+            <ul class="location-list">
+                <li>Kota Kinabalu - <span>Taman Laut Tunku Abdul Rahman</span></li>
+                <li>Kundasang - <span>Desa Dairy Farm</span></li>
+                <li>Semporna - <span>Pulau Mabul</span></li>
+                <li>Ranau - <span>Gunung Kinabalu</span></li>
+            </ul>
+            
+            <a href="https://maps.google.com" target="_blank" class="hero-button">BUKA DI GOOGLE MAPS</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sabah | Dibangunkan oleh FATIHAH BINTI ABDULLAH Pelajar Diploma Teknologi Maklumat |</p>
+</footer>
+
+</body>
+</html>

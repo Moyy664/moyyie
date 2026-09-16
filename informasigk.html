@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunung Kinabalu - Laman Informasi Di Sabah</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ background:#f5f7f3; color:#26352d; font-family:'Montserrat', Arial, sans-serif; }
+
+/* HEADER KECIL - DAH TUKAR GAMBAR */
+.header{ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("nabalu6.jpg"); background-size:cover; background-position:center; height:50vh; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; position:relative; }
+.logo{ position:absolute; top:28px; left:6%; font-family:'Cinzel', serif; font-size:24px; font-weight:700; letter-spacing:5px; }
+.logo a{ color:white; text-decoration:none; }
+.logo span{ color:#e1b45c; }
+.header h1{ font-family:'Cinzel', serif; font-size:38px; letter-spacing:3px; margin-bottom:10px; }
+.header p{ font-family:'Great Vibes', cursive; font-size:32px; color:#f4d28a; }
+
+/* MENU KEMBALI */
+.back-btn{ display:inline-block; margin:30px 8%; background:#086b79; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
+.back-btn:hover{ background:#064e59; transform:translateX(-5px); }
+
+/* KANDUNGAN */
+.container{ max-width:1100px; margin:0 auto; padding:0 8% 80px; }
+.info-grid{ display:grid; grid-template-columns: 2fr 1fr; gap:40px; margin-bottom:50px; }
+
+.info-main h2{ font-family:'Cinzel', serif; color:#174d36; font-size:32px; margin-bottom:20px; border-left:5px solid #d4a64d; padding-left:15px; }
+.info-main p{ line-height:1.9; color:#4a5a52; margin-bottom:18px; font-size:15px; }
+.info-main img{ width:100%; border-radius:15px; margin:20px 0; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
+
+.info-side{ background:white; padding:25px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.08); height:fit-content; }
+.info-side h3{ font-family:'Cinzel', serif; color:#174d36; font-size:20px; margin-bottom:15px; border-bottom:2px solid #d4a64d; padding-bottom:10px; }
+.info-side ul{ list-style:none; }
+.info-side li{ padding:10px 0; border-bottom:1px solid #eee; color:#68736d; }
+.info-side li strong{ color:#26352d; }
+
+.gallery{ display:grid; grid-template-columns:repeat(3, 1fr); gap:15px; margin-top:30px; }
+.gallery img{ width:100%; height:200px; object-fit:cover; border-radius:10px; transition:0.3s; }
+.gallery img:hover{ transform:scale(1.05); }
+
+/* VIDEO */
+.video-full{ width:100%; aspect-ratio: 16/9; border-radius:15px; margin:30px 0; border:4px solid #086b79; }
+
+/* FOOTER */
+footer{ background:#174d36; color:white; text-align:center; padding:30px 20px; }
+footer span{ color:#d4a64d; }
+
+/* RESPONSIVE */
+@media(max-width:900px){ 
+    .info-grid{ grid-template-columns:1fr; }
+    .gallery{ grid-template-columns:repeat(2, 1fr); }
+}
+@media(max-width:600px){ 
+    .header h1{ font-size:28px; }
+    .gallery{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo"><a href="LAMAN UTAMA.html">SA<span>BAH</span></a></div>
+    <h1>GUNUNG KINABALU</h1>
+    <p>Bumbung Asia Tenggara</p>
+</header>
+
+<!-- BUTTON KEMBALI -->
+<a href="TEMPAT MENARIK.html" class="back-btn">← KEMBALI KE TEMPAT MENARIK</a>
+
+<!-- KANDUNGAN UTAMA -->
+<div class="container">
+    
+    <div class="info-grid">
+        <!-- KIRI: INFO PANJANG -->
+        <div class="info-main">
+            <h2>Tentang Gunung Kinabalu</h2>
+            <p>
+                Gunung Kinabalu merupakan gunung tertinggi di Asia Tenggara dengan ketinggian 
+                4,095 meter dari aras laut. Ia terletak di Taman Kinabalu yang telah diiktiraf 
+                sebagai Tapak Warisan Dunia UNESCO sejak tahun 2000.
+            </p>
+            <p>
+                Gunung ini terkenal dengan biodiversiti yang sangat tinggi. Terdapat lebih 
+                daripada 5,000 spesies tumbuhan, 300 spesies burung dan 100 spesies mamalia. 
+                Bunga Rafflesia yang terbesar di dunia juga boleh ditemui di sini.
+            </p>
+            
+            <img src="nabalu6.jpg" alt="Gunung Kinabalu">
+
+            <h2>Aktiviti Menarik</h2>
+            <p>
+                1. Mendaki Gunung: Cabaran ke puncak Low's Peak dalam 2 hari 1 malam. <br>
+                2. Taman Botani: Lihat pelbagai spesies orkid dan tumbuhan unik. <br>
+                3. Kolam Air Panas Poring: Rileks selepas mendaki. <br>
+                4. Canopy Walk: Jambatan gantung 40 meter di atas tanah. <br>
+                5. Lihat Rafflesia: Bunga terbesar di dunia jika bermusim.
+            </p>
+
+            <h2>Video Pemandangan</h2>
+            <video controls class="video-full">
+                <source src="vidgk.mp4" type="video/mp4">
+            </video>
+
+            <h2>Galeri Gambar</h2>
+            <div class="gallery">
+                <img src="nabalu1.jpg" alt="">
+                <img src="nabalu2.jpg" alt="">
+                <img src="nabalu3.jpg" alt="">
+            </div>
+
+        </div>
+
+        <!-- KAN: INFO PANTAS -->
+        <div class="info-side">
+            <h3>Maklumat Pantas</h3>
+            <ul>
+                <li><strong>Lokasi:</strong> Ranau, Sabah</li>
+                <li><strong>Ketinggian:</strong> 4,095 meter</li>
+                <li><strong>Masa Terbaik:</strong> Mac - September</li>
+                <li><strong>Aktiviti:</strong> Mendaki, Canopy Walk, Hot Spring</li>
+                <li><strong>Kemudahan:</strong> Laban Rata, Pusat Pelawat, Chalet</li>
+            </ul>
+
+            <h3 style="margin-top:30px;">Tips Pendaki</h3>
+            <ul>
+                <li>Tempah permit 3 bulan awal</li>
+                <li>Bawa jaket sejuk dan sarung tangan</li>
+                <li>Mulakan daki awal pagi</li>
+                <li>Jaga stamina dan hidrasi</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Sabah | Dibangunkan oleh FATIHAH BINTI ABDULLAH Pelajar Diploma Teknologi Maklumat |</p>
+</footer>
+
+</body>
+</html>

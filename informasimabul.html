@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulau Mabul - Laman Informasi Di Sabah</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ background:#f5f7f3; color:#26352d; font-family:'Montserrat', Arial, sans-serif; } /* DAH TUKAR KE ASAL */
+
+/* HEADER KECIL */
+.header{ background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("pulaumabul.jpg"); background-size:cover; background-position:center; height:50vh; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; position:relative; }
+.logo{ position:absolute; top:28px; left:6%; font-family:'Cinzel', serif; font-size:24px; font-weight:700; letter-spacing:5px; }
+.logo a{ color:white; text-decoration:none; }
+.logo span{ color:#d4a64d; } /* EMAS ASAL */
+
+.header h1{ font-family:'Cinzel', serif; font-size:42px; letter-spacing:3px; margin-bottom:10px; }
+.header p{ font-family:'Great Vibes', cursive; font-size:32px; color:#d4a64d; } /* EMAS ASAL */
+
+/* MENU KEMBALI */
+.back-btn{ display:inline-block; margin:30px 8%; background:#086b79; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; } /* HIJAU ASAL */
+.back-btn:hover{ background:#064e59; transform:translateX(-5px); } /* HIJAU GELAP ASAL */
+
+/* KANDUNGAN */
+.container{ max-width:1100px; margin:0 auto; padding:0 8% 80px; }
+.info-grid{ display:grid; grid-template-columns: 2fr 1fr; gap:40px; margin-bottom:50px; }
+
+.info-main h2{ font-family:'Cinzel', serif; color:#174d36; font-size:32px; margin-bottom:20px; border-left:5px solid #d4a64d; padding-left:15px; } /* HIJAU GELAP + GARIS EMAS */
+.info-main p{ line-height:1.9; color:#68736d; margin-bottom:18px; font-size:15px; } /* ABU ASAL */
+.info-main img{ width:100%; border-radius:15px; margin:20px 0; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
+
+.info-side{ background:white; padding:25px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.08); height:fit-content; position:sticky; top:100px; }
+.info-side h3{ font-family:'Cinzel', serif; color:#174d36; font-size:20px; margin-bottom:15px; border-bottom:2px solid #d4a64d; padding-bottom:10px; } /* HIJAU GELAP + GARIS EMAS */
+.info-side ul{ list-style:none; }
+.info-side li{ padding:10px 0; border-bottom:1px solid #e5e5e5; color:#68736d; } /* ABU ASAL */
+.info-side li strong{ color:#26352d; } /* HITAM HIJAU ASAL */
+
+.gallery{ display:grid; grid-template-columns:repeat(3, 1fr); gap:15px; margin-top:30px; }
+.gallery img{ width:100%; height:200px; object-fit:cover; border-radius:10px; transition:0.3s; }
+.gallery img:hover{ transform:scale(1.05); }
+
+/* VIDEO */
+.video-full{ width:100%; aspect-ratio: 16/9; border-radius:15px; margin:30px 0; border:4px solid #086b79; background:#000; } /* BORDER HIJAU ASAL */
+
+/* FOOTER */
+footer{ background:#174d36; color:white; text-align:center; padding:30px 20px; } /* HIJAU GELAP ASAL */
+footer span{ color:#d4a64d; } /* EMAS ASAL */
+
+/* RESPONSIVE */
+@media(max-width:900px){ 
+    .info-grid{ grid-template-columns:1fr; }
+    .info-side{ position:relative; top:0; }
+    .gallery{ grid-template-columns:repeat(2, 1fr); }
+}
+@media(max-width:600px){ 
+    .header h1{ font-size:28px; }
+    .gallery{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo"><a href="LAMAN UTAMA.html">SA<span>BAH</span></a></div> <!-- LINK KE LAMAN UTAMA -->
+    <h1>PULAU MABUL</h1>
+    <p>Syurga Muck Diving Dunia</p>
+</header>
+
+<!-- BUTTON KEMBALI - DAH LINK KE TEMPAT MENARIK -->
+<a href="TEMPAT MENARIK.html" class="back-btn">← KEMBALI KE TEMPAT MENARIK</a>
+
+<!-- KANDUNGAN UTAMA -->
+<div class="container">
+    
+    <div class="info-grid">
+        <!-- KIRI: INFO PANJANG -->
+        <div class="info-main">
+            <h2>Tentang Pulau Mabul</h2>
+            <p>
+                Pulau Mabul terletak 15 minit perjalanan bot dari Pulau Sipadan, Semporna. 
+                Pulau ini terkenal di seluruh dunia sebagai lokasi terbaik untuk aktiviti 
+                "Muck Diving" iaitu menyelam untuk melihat hidupan laut mikro yang unik.
+            </p>
+            <p>
+                Berbeza dengan Sipadan yang ada terumbu karang, Mabul adalah pulau pasir dengan 
+                dasar laut berlumpur. Di sinilah anda boleh jumpa kuda laut kerdil, sotong, 
+                udang mantis, dan pelbagai makhluk laut pelik yang tidak ada di tempat lain.
+            </p>
+            
+            <img src="pulaumabul.jpg" alt="Pulau Mabul Semporna">
+
+            <h2>Aktiviti Menarik</h2>
+            <p>
+                1. Muck Diving: Syurga untuk jurugambar bawah air. Cari makhluk laut mikro.<br>
+                2. Snorkeling: Air cetek di sekitar resort sangat jernih dan penuh ikan.<br>
+                3. Day Trip ke Sipadan: Kebanyakan resort Mabul ada pakej ke Sipadan.<br>
+                4. Sunset Cruise: Nikmati matahari terbenam dengan latar Pulau Sipadan.<br>
+                5. Lawatan Kampung Bajau Laut: Kenali budaya masyarakat atas air.
+            </p>
+
+            <h2>Jenis Penginapan</h2>
+            <p>
+                Di Mabul tiada penduduk tetap. Semua penginapan adalah resort.<br>
+                <strong>1. Resort Atas Air:</strong> Mewah, ada kolam, restoran. Harga RM800 - RM2000/malam<br>
+                <strong>2. Water Bungalow:</strong> Bajet sederhana, terus ke laut. RM400 - RM800/malam<br>
+                <strong>Semua pakej</strong> biasanya termasuk 3 kali makan dan 2-3 kali dive sehari.
+            </p>
+
+            <h2>Video Pemandangan</h2>
+            <video controls class="video-full">
+                <source src="vidpulaumabul.mp4" type="video/mp4">
+                Browser anda tidak menyokong video.
+            </video>
+
+            <h2>Galeri Gambar</h2>
+            <div class="gallery">
+                <img src="pm1.jpg" alt="Resort Atas Air">
+                <img src="pm2.jpg" alt="Muck Diving">
+                <img src="pm3.png" alt="Sunset Mabul">
+            </div>
+
+        </div>
+
+        <!-- KAN: INFO PANTAS -->
+        <div class="info-side">
+            <h3>Maklumat Pantas</h3>
+            <ul>
+                <li><strong>Lokasi:</strong> Semporna, Sabah</li>
+                <li><strong>Jarak:</strong> 45 minit bot dari Jeti Semporna</li>
+                <li><strong>Terkenal:</strong> Muck Diving #1 Dunia</li>
+                <li><strong>Masa Terbaik:</strong> Mac - Oktober</li>
+                <li><strong>Permit:</strong> Diuruskan oleh Resort</li>
+            </ul>
+
+            <h3 style="margin-top:30px;">Hidupan Laut Unik</h3>
+            <ul>
+                <li>Kuda Laut Kerdil</li>
+                <li>Sotong Cincin Biru</li>
+                <li>Udang Mantis</li>
+                <li>Ikan Katak</li>
+                <li>Nudibranch Berwarna</li>
+            </ul>
+
+            <h3 style="margin-top:30px;">Tips Pelancong</h3>
+            <ul>
+                <li>Tempah resort 3 bulan awal</li>
+                <li>Bawa lesen menyelam jika ada</li>
+                <li>Bawa ubat mabuk laut</li>
+                <li>Internet sangat terhad</li>
+                <li>Bawa duit tunai</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Sabah | Dibangunkan oleh FATIHAH BINTI ABDULLAH Pelajar Diploma Teknologi Maklumat |</p>
+</footer>
+
+</body>
+</html>

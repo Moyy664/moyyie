@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Laman Informasi Di Sabah</title>
+
+<!-- =====================================================
+     GOOGLE FONT
+     ===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7f3;
+    color:#26352d;
+    font-family:'Montserrat', Arial, sans-serif;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero{
+    width:100%;
+    height:650px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    overflow:hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.25),
+            rgba(0,0,0,0.68)
+        ),
+        url("HERO.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+.logo{
+    position:absolute;
+    top:28px;
+    left:6%;
+    z-index:5;
+    color:white;
+    font-family:'Cinzel', serif;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:5px;
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.8);
+}
+
+.logo span{
+    color:#e1b45c;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+   ===================================================== */
+
+.hero-content{
+    position:relative;
+    z-index:3;
+    width:90%;
+    max-width:1100px;
+    margin-top:20px;
+}
+
+
+/* =====================================================
+   SELAMAT DATANG KE
+   ===================================================== */
+
+.welcome{
+    font-family:'Montserrat', sans-serif;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.9);
+
+    animation:
+        fadeDown 1.5s ease;
+}
+
+
+/* =====================================================
+   GARIS KIRI DAN KANAN
+   ===================================================== */
+
+.welcome-line{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+.welcome-line::before,
+.welcome-line::after{
+    content:"";
+    width:90px;
+    height:2px;
+    background:#e1b45c;
+}
+
+
+/* =====================================================
+   LAMAN INFORMASI DI SABAH
+   ===================================================== */
+
+.hero h1{
+    font-family:'Cinzel', serif;
+    font-size:64px;
+    font-weight:700;
+    letter-spacing:5px;
+    line-height:1.2;
+    margin-bottom:28px;
+    text-transform:uppercase;
+    color:white;
+
+    text-shadow:
+        0 5px 15px rgba(0,0,0,0.9),
+        0 0 25px rgba(0,0,0,0.5);
+
+    animation:
+        fadeUp 1.7s ease;
+}
+
+
+/* =====================================================
+   NEGERI DI BAWAH BAYU
+   ===================================================== */
+
+.tagline{
+    font-family:'Great Vibes', cursive;
+    font-size:60px;
+    font-weight:400;
+    color:#f4d28a;
+    margin-bottom:28px;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.9);
+
+    animation:
+        fadeUp 2s ease;
+}
+
+
+/* =====================================================
+   AYAT PENERANGAN
+   ===================================================== */
+
+.hero-description{
+    max-width:750px;
+    margin:0 auto 30px auto;
+    font-family:'Montserrat', sans-serif;
+    font-size:16px;
+    line-height:1.8;
+    color:white;
+
+    text-shadow:
+        0 2px 8px black;
+
+    animation:
+        fadeUp 2.2s ease;
+}
+
+
+/* =====================================================
+   BUTTON TEROKAI SABAH
+   ===================================================== */
+
+.hero-button{
+    display:inline-block;
+    padding:15px 38px;
+    background:#d4a64d;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    transition:0.4s;
+
+    animation:
+        fadeUp 2.4s ease;
+}
+
+.hero-button:hover{
+    background:#b88730;
+    transform:translateY(-5px);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+/* =====================================================
+   ANIMATION
+   ===================================================== */
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+nav{
+    width:100%;
+    display:flex;
+    background:#086b79;
+    border-bottom:3px solid white;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    flex:1;
+    min-height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-family:'Montserrat', sans-serif;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    border-right:1px solid rgba(255,255,255,0.7);
+    transition:0.3s;
+}
+
+nav a:first-child{
+    border-left:1px solid rgba(255,255,255,0.7);
+}
+
+nav a:hover{
+    background:#064e59;
+}
+
+nav a.active{
+    background:#064e59;
+}
+
+
+/* =====================================================
+   INTRO / KENALI SABAH
+   ===================================================== */
+
+.intro{
+    padding:55px 8% 75px;
+    text-align:center;
+    background:white;
+}
+
+.intro h2{
+    font-family:'Cinzel', serif;
+    color:#174d36;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.intro h2 span{
+    color:#d4a64d;
+}
+
+.intro p{
+    max-width:800px;
+    margin:auto;
+    color:#68736d;
+    line-height:1.9;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+
+/* =====================================================
+   LAGU SABAH
+   ===================================================== */
+
+.music-section{
+    padding:35px 20px 45px;
+    background:white;
+    text-align:center;
+}
+
+.music-title{
+    font-family:'Cinzel', serif;
+    font-size:24px;
+    font-weight:700;
+    color:#174d36;
+    margin-bottom:15px;
+}
+
+.music-description{
+    color:#68736d;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.music-player{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.music-player audio{
+    width:100%;
+    max-width:500px;
+}
+
+
+/* =====================================================
+   TEROKAI SABAH
+   ===================================================== */
+
+.quick{
+    padding:75px 7%;
+    background:#f5f7f3;
+}
+
+.quick-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.quick-title h2{
+    font-family:'Cinzel', serif;
+    font-size:38px;
+    color:#174d36;
+}
+
+.quick-title span{
+    color:#d4a64d;
+}
+
+.quick-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.quick-card{
+    background:white;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.10);
+    transition:0.4s;
+}
+
+.quick-card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.16);
+}
+
+.quick-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.quick-card-content{
+    padding:25px;
+    text-align:center;
+}
+
+.quick-card-content h3{
+    font-family:'Cinzel', serif;
+    color:#174d36;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.quick-card-content p{
+    color:#68736d;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.quick-card-content a{
+    display:inline-block;
+    background:#086b79;
+    color:white;
+    padding:11px 18px;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.quick-card-content a:hover{
+    background:#064e59;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer{
+    background:#102e22;
+    color:white;
+    text-align:center;
+    padding:28px;
+}
+
+footer p{
+    font-size:13px;
+    opacity:0.85;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media(max-width:1000px){
+
+    .hero{
+        height:600px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .tagline{
+        font-size:50px;
+    }
+
+    .quick-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* =====================================================
+   TELEFON
+   ===================================================== */
+
+@media(max-width:700px){
+
+    .hero{
+        height:650px;
+        padding:30px 20px;
+    }
+
+    .logo{
+        top:20px;
+        left:20px;
+        font-size:22px;
+        letter-spacing:3px;
+    }
+
+    .hero-content{
+        margin-top:50px;
+    }
+
+    .welcome{
+        font-size:11px;
+        letter-spacing:4px;
+    }
+
+    .welcome-line{
+        gap:10px;
+    }
+
+    .welcome-line::before,
+    .welcome-line::after{
+        width:40px;
+    }
+
+    .hero h1{
+        font-size:30px;
+        letter-spacing:2px;
+        line-height:1.3;
+        margin-bottom:20px;
+    }
+
+    .tagline{
+        font-size:40px;
+        line-height:1.2;
+    }
+
+    .hero-description{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+
+    /* MENU */
+
+    nav{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    nav a{
+        min-height:55px;
+        font-size:10px;
+        padding:8px;
+    }
+
+
+    /* INTRO */
+
+    .intro{
+        padding:45px 25px 60px;
+    }
+
+    .intro h2{
+        font-size:30px;
+    }
+
+
+    /* LAGU */
+
+    .music-section{
+        padding:30px 20px 40px;
+    }
+
+    .music-title{
+        font-size:21px;
+    }
+
+    .music-description{
+        font-size:13px;
+    }
+
+
+    /* QUICK */
+
+    .quick{
+        padding:55px 20px;
+    }
+
+    .quick-title h2{
+        font-size:30px;
+    }
+
+    .quick-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HERO / GAMBAR UTAMA
+     ===================================================== -->
+
+<section class="hero">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+        SA<span>BAH</span>
+    </div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+        <!-- SELAMAT DATANG KE -->
+
+        <div class="welcome welcome-line">
+            SELAMAT DATANG KE
+        </div>
+
+
+        <!-- LAMAN INFORMASI DI SABAH -->
+
+        <h1>
+            LAMAN INFORMASI DI SABAH
+        </h1>
+
+
+        <!-- NEGERI DI BAWAH BAYU -->
+
+        <div class="tagline">
+            Negeri Di Bawah Bayu
+        </div>
+
+
+        <!-- PENERANGAN -->
+
+        <p class="hero-description">
+            Terokai keindahan alam semula jadi,
+            tempat menarik dan keunikan budaya
+            Sabah yang menakjubkan.
+        </p>
+
+
+        <!-- BUTTON -->
+
+        <a
+            href="TEMPAT MENARIK.html"
+            class="hero-button"
+        >
+            TEROKAI SABAH
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MENU UTAMA
+     ===================================================== -->
+
+<nav>
+
+    <a
+        href="LAMAN UTAMA.html"
+        class="active"
+    >
+        LAMAN UTAMA
+    </a>
+
+
+    <a
+        href="TEMPAT MENARIK.html"
+    >
+        TEMPAT MENARIK
+    </a>
+
+
+    <a
+        href="PETA.html"
+    >
+        PETA LOKASI
+    </a>
+
+
+    <a
+        href="RUJUKAN.html"
+    >
+        SUMBER RUJUKAN
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     LAGU SABAH
+     BAHAGIAN INI BERADA DI ATAS "KENALI SABAH"
+     ===================================================== -->
+
+
+<section class="music-section">
+
+    <div class="music-title">
+        Dengarkan Lagu Sabah
+    </div>
+
+    <p class="music-description">
+        Nikmati muzik sambil menerokai informasi mengenai Sabah.
+    </p>
+
+    <div class="music-player">
+
+        <audio controls preload="metadata">
+            <source src="lgu.mp3" type="audio/mpeg">
+            Browser anda menyokong audio.
+        </audio>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     PENGENALAN SABAH
+     ===================================================== -->
+
+<section class="intro">
+
+    <h2>
+        Kenali <span>Sabah</span>
+    </h2>
+
+
+    <p>
+        Sabah, atau "Negeri Di Bawah Bayu" merupakan salah satu daripada dua negeri di Malaysia Timur yang terletak di utara Pulau Borneo.
+        Dikenali dengan keindahan alam semula jadi yang mempesonakan, Sabah menawarkan gabungan unik antara gunung tertinggi,
+        hutan hujan tertua, pulau-pulau tropika, dan lautan yang jernih.
+    </p>
+
+
+    <p>
+
+        <b>TUJUAN:</b>
+        <br> "Laman sesawang ini dicipta dengan tujuan menyediakan sumber maklumat yang sahih, terkini dan komprehensif mengenai negeri Sabah dalam aspek sejarah, budaya, pelancongan, pendidikan dan sosioekonomi." "Portal Informasi Sabah ini juga ditubuhkan bagi memudahkan capaian maklumat kepada masyarakat umum, pelajar, dan pelancong yang ingin mengenali dengan lebih mendalam tentang keunikan dan kepelbagaian negeri Sabah."
+
+    </p>
+
+
+    </p>
+
+
+    <p>
+
+        Marilah terokai Sabah, di mana keindahan alam bertemu
+        dengan kehangatan budaya dan kepelbagaian manusia.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <p>
+        ©2026 Sabah | Dibangunkan oleh FATIHAH BINTI ABDULLAH Pelajar Diploma Teknologi Maklumat |
+    </p>
+
+</footer>
+
+
+</body>
+</html>
